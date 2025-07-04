@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur sint tempor id anim elit velit enim. Consectetur tempor ullamco qui exercitation ullamco ut minim commodo eiusmod ex consequat est. Sint cupidatat ex nostrud."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

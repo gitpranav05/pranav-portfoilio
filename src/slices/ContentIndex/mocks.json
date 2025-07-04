@@ -1,0 +1,44 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "gate",
+				"type": "Text"
+			},
+			"content_type": {
+				"__TYPE__": "FieldContent",
+				"value": "Project",
+				"type": "Select"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur tempor tempor aute voluptate qui eu. Excepteur quis duis veniam consectetur ullamco commodo cupidatat eiusmod esse sint."
+						}
+					}
+				]
+			},
+			"read_more_text": {
+				"__TYPE__": "FieldContent",
+				"value": "shown",
+				"type": "Text"
+			},
+			"view_project": {
+				"key": "ad85ddae-6fbb-4bbe-83fe-d717f48752fb",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "compare"
+				}
+			}
+		},
+		"items": []
+	}
+]
