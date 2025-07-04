@@ -14,16 +14,16 @@ const urbanist = Urbanist({
 
 
 
-export async function generateMetadata: Promise<Metadata> = {
-  const client =createClient();
-  const settings =await client.getSingle("settings");
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient();
+  const settings = await client.getSingle("settings");
 
-  return{
-
+  return {
     title: settings.data.meta_title,
     description: settings.data.meta_description,
-  }
-};
+  };
+}
+
 
 export default function RootLayout({
   children,
