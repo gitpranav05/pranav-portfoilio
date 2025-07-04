@@ -1,10 +1,27 @@
 import React from "react";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
-import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
-export type ExperienceProps = SliceComponentProps<Content.ExperienceSlice>;
+// Define custom type for items
+type ExperienceItem = {
+  title: string;
+  time_period: string;
+  institution: string;
+  description: any; // PrismicRichTextField or RichTextField depending on your setup
+};
+
+// Extend Slice type
+type ExperienceSlice = {
+  slice_type: string;
+  variation: string;
+  primary: {
+    heading: string;
+  };
+  items: ExperienceItem[];
+};
+
+export type ExperienceProps = SliceComponentProps<ExperienceSlice>;
 
 const Experience = ({ slice }: ExperienceProps) => {
   return (
@@ -18,7 +35,7 @@ const Experience = ({ slice }: ExperienceProps) => {
             {item.title}
           </Heading>
           <div className="mt-1 flex w-fit items-center gap-1 text-2xl font-semibold tracking-tight text-slate-400">
-            <span>{item.duration}</span>
+            <span>{item.time_period}</span>
             <span className="text-3xl font-extralight">/</span>
             <span>{item.institution}</span>
           </div>
