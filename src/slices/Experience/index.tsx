@@ -2,26 +2,9 @@ import React from "react";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { Content } from "@prismicio/client";
 
-// Define custom type for items
-type ExperienceItem = {
-  title: string;
-  time_period: string;
-  institution: string;
-  description: any; // PrismicRichTextField or RichTextField depending on your setup
-};
-
-// Extend Slice type
-type ExperienceSlice = {
-  slice_type: string;
-  variation: string;
-  primary: {
-    heading: string;
-  };
-  items: ExperienceItem[];
-};
-
-export type ExperienceProps = SliceComponentProps<ExperienceSlice>;
+export type ExperienceProps = SliceComponentProps<Content.ExperienceSlice>;
 
 const Experience = ({ slice }: ExperienceProps) => {
   return (
@@ -29,7 +12,8 @@ const Experience = ({ slice }: ExperienceProps) => {
       <Heading as="h2" size="lg">
         {slice.primary.heading}
       </Heading>
-      {slice.items.map((item, index) => (
+      {/* {slice.primary.repeatable.map} */}
+      {slice.primary.repeatable.map((item, index) => (
         <div key={index} className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16">
           <Heading as="h3" size="sm">
             {item.title}
@@ -40,7 +24,10 @@ const Experience = ({ slice }: ExperienceProps) => {
             <span>{item.institution}</span>
           </div>
           <div className="prose prose-lg prose-invert mt-4">
-            <PrismicRichText field={item.description} />
+            {Array.isArray(slice.primary.description) && (
+  <PrismicRichText field={slice.primary.description} />
+)}
+
           </div>
         </div>
       ))}

@@ -4,7 +4,6 @@ import Bounded from "@/components/Bounded";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import Heading from "@/components/Heading";
 import Button from "@/components/Button";
-import { PrismicNextImage } from "@prismicio/next";
 import Avatar from "./Avatar";
 
 /**
