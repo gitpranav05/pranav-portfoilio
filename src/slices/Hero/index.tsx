@@ -7,14 +7,10 @@ import gsap from "gsap";
 import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
 
-/**
- * Props for `Hero`.
- */
+
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
-/**
- * Component for "Hero" Slice.
- */
+
 const Hero: FC<HeroProps> = ({ slice }) => {
   const component = useRef(null);
 
