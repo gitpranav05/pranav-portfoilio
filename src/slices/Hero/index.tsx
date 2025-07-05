@@ -39,7 +39,6 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           },
         }
       );
-
       tl.fromTo(
         ".job-title",
         {
