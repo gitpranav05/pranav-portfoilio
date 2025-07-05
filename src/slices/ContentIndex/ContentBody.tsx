@@ -1,8 +1,6 @@
-import { notFound } from "next/navigation";
+
 import { asImageSrc, Content, DateField, isFilled } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
-
-import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";

@@ -97,7 +97,7 @@ const TechList: FC<TechListProps> = ({ slice }) => {
 <div style={{ height: "30vh" }} />
 
     </section>
-<div style={{ height: "100vh" }} />
+{/* <div style={{ height: "100vh" }} /> */}
 
 
               </section>

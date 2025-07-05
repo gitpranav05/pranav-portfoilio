@@ -24,10 +24,8 @@ const Experience = ({ slice }: ExperienceProps) => {
             <span>{item.institution}</span>
           </div>
           <div className="prose prose-lg prose-invert mt-4">
-  {/* {Array.isArray(item.description) ? (
-    <PrismicRichText field={item.description} />
-  ) : null} */}
-</div>
+            {item.description}
+          </div>
 
         </div>
       ))}
